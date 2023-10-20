@@ -7,6 +7,7 @@ import {
   Title,
   SubTitle,
   Image,
+  Video,
 } from "./styles/jumbotron";
 
 export default function Jumbotron({
@@ -41,4 +42,8 @@ Jumbotron.SubTitle = function JumbotronSubTitle({ children, ...restProps }) {
 
 Jumbotron.Image = function JumbotronImage({ ...restProps }) {
   return <Image {...restProps} />;
+};
+
+Jumbotron.Video = function JumbotronVideo({ ...restProps }) {
+  return <Video {...restProps} />;
 };

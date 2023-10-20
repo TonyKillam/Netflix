@@ -5,7 +5,8 @@
       "subTitle": "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
       "image": "/images/misc/home-tv.jpg",
       "alt": "Tiger King on Netflix",
-      "direction": "row"
+      "direction": "row",
+      "video": "/videos/jumbotron.mp4"
     },
     {
       "id": 2,

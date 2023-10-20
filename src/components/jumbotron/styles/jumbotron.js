@@ -63,3 +63,8 @@ export const Image = styled.img`
   max-width: 100%;
   height: auto;
 `;
+
+export const Video = styled.video`
+  max-width: 100%;
+  height: 10%;
+`;
