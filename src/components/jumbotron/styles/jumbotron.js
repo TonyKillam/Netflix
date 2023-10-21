@@ -41,6 +41,8 @@ export const Pane = styled.div`
 
 export const Title = styled.h1`
   font-size: 50px;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
   line-height: 1.1;
   margin-bottom: 8px;
 
@@ -50,7 +52,9 @@ export const Title = styled.h1`
 `;
 
 export const SubTitle = styled.h2`
-  font-size: 26px;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+  font-size: 25px;
   font-weight: normal;
   line-height: normal;
 
@@ -66,5 +70,5 @@ export const Image = styled.img`
 
 export const Video = styled.video`
   max-width: 100%;
-  height: 10%;
+  height: auto;
 `;
