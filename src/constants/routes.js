@@ -1,0 +1,12 @@
+export const HOME = "/";
+export const BROWSE = "/browse";
+export const SIGN_UP = "/signup";
+export const SIGN_IN = "/signin";
+// export const PROFILE = '/profile';
+// export const FAQ = '/faq';
+// export const TERMS = '/terms';
+// export const PRIVACY = '/privacy';
+// export const HELP = '/help';
+// export const CONTACT = '/contact';
+// export const ABOUT = '/about';
+// export const ACCOUNT = '/account';
