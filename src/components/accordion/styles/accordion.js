@@ -29,7 +29,7 @@ export const Title = styled.h1`
 export const Item = styled.div`
   color: white;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
   max-width: 670px;
   width: 100%;
 
@@ -57,6 +57,10 @@ export const Header = styled.div`
   padding: 0.8em 1.2em 0.8em 1.2em;
   user-select: none;
   align-items: center;
+
+  &:hover {
+    background: gray;
+  }
 
   img {
     filter: brightness(0) invert(1);
