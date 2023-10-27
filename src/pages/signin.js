@@ -1,14 +1,46 @@
-import React from "react";
-import { Button } from "../components/opt-form/styles/opt-form";
-import { Footer } from "../components";
+import React, { useState } from "react";
+import FooterContainer from "../containers/footer";
+import { HeaderContainer } from "../containers/header";
+import { Form } from "../components";
 
 export default function Signin() {
+  const [emailAddress, setEmailAddress] = useState();
+  const [password, setPassword] = useState();
+  const [error, setError] = useState("");
+
+  const isInvalid = password === "" || emailAddress === "";
+  const handleSignIn = (event) => {
+    event.preventDefault();
+
+    // firebase work here!
+  };
+
   return (
     <>
-      <h1 className="text-center">Hello, I'm Signin Page :P</h1>;
-      <Button>
-        <Footer.Link href="/">Home</Footer.Link>
-      </Button>
+      <HeaderContainer>
+        <Form>
+          <Form.Title>Sign In</Form.Title>
+          {error && <Form.Error>{error}</Form.Error>}
+          <Form.Base onSubmit={handleSignIn} method="POST">
+            <Form.Input
+              placeholder="Email address"
+              value={emailAddress}
+              onChange={({ target }) => setEmailAddress(target.value)}
+            />
+            <Form.Input
+              type="password"
+              autoComplete="off"
+              placeholder="Email password"
+              value={password}
+              onChange={({ target }) => setPassword(target.value)}
+            />
+            <Form.Submit disabled={isInvalid} type="submit">
+              Sign In
+            </Form.Submit>
+          </Form.Base>
+        </Form>
+      </HeaderContainer>
+      <FooterContainer />
     </>
   );
 }
