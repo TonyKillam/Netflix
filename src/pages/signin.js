@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
-// useHistory is replaced with useNavigate
-import { useNavigate } from "react-router-dom";
+// useHistory is replaced with useNavigate in latest version of react-router-dom
+// We have rolled back to version 5.2.0 because of React Router Redirect issue
+import { useHistory } from "react-router-dom";
 import { FirebaseContext } from "../context/firebase";
 import FooterContainer from "../containers/footer";
 import { HeaderContainer } from "../containers/header";
@@ -8,7 +9,7 @@ import { Form } from "../components";
 import * as ROUTES from "../constants/routes";
 
 export default function Signin() {
-  const history = useNavigate();
+  const history = useHistory();
   const { firebase } = useContext(FirebaseContext);
   const [emailAddress, setEmailAddress] = useState("");
   const [password, setPassword] = useState("");
@@ -25,7 +26,7 @@ export default function Signin() {
       .signInWithEmailAndPassword(emailAddress, password)
       .then(() => {
         // push to the browse page
-        history(ROUTES.BROWSE);
+        history.push(ROUTES.BROWSE);
       })
       .catch((error) => {
         setEmailAddress("");

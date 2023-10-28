@@ -19,9 +19,9 @@ export function JumbotronContainer() {
                   src={item.video}
                   alt={item.alt}
                   type="video/mp4"
-                  loop="true"
-                  autoplay="true"
-                  muted="true"
+                  loop
+                  autoPlay
+                  muted
                 />
               ) : (
                 <Jumbotron.Image src={item.image} alt={item.alt} />
