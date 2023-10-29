@@ -1,14 +1,20 @@
 import React from "react";
-import { Button } from "../components/opt-form/styles/opt-form";
-import { Footer } from "../components";
+import { useContent } from "../hooks";
+import selectionFilter from "../utils/selection-filter";
+import { BrowseContainer } from "../containers/browse";
 
 export default function Browse() {
+  // we need the series and the films
+  const { series } = useContent("series");
+  const { films } = useContent("films");
+
+  // we need slides
+  const slides = selectionFilter({ series, films });
+  // console.log(slides);
+
   return (
     <>
-      <h1 className="text-center">Hello, I'm Browsing Netflix here :P</h1>;
-      <Button>
-        <Footer.Link href="/">Home</Footer.Link>
-      </Button>
+      <BrowseContainer slides={slides} />
     </>
   );
 }
