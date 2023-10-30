@@ -6,6 +6,7 @@ import * as ROUTES from "../constants/routes";
 import logo from "../logo.svg";
 
 export function BrowseContainer({ slides }) {
+  const [searchTerm, setSearchTerm] = useState("");
   const [profile, setProfile] = useState({});
   const [loading, setLoaading] = useState(true);
   const { firebase } = useContext(FirebaseContext);
@@ -30,6 +31,10 @@ export function BrowseContainer({ slides }) {
           </Header.Group>
 
           <Header.Group>
+            <Header.Search
+              searchTerm={searchTerm}
+              setSearchTerm={setSearchTerm}
+            />
             <Header.Profile>
               <Header.Picture src={user.photoURL} />
               <Header.Dropdown>
@@ -45,12 +50,6 @@ export function BrowseContainer({ slides }) {
               </Header.Dropdown>
             </Header.Profile>
           </Header.Group>
-
-          {/* <Header.Group>
-            <Header.TextLink>Search</Header.TextLink>
-            <Header.TextLink>Watchlist</Header.TextLink>
-            <Header.TextLink>Account</Header.TextLink>
-          </Header.Group> */}
         </Header.Frame>
         <Header.Feature>
           <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
