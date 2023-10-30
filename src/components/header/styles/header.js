@@ -228,3 +228,25 @@ export const SearchIcon = styled.button`
     width: 16px;
   }
 `;
+
+export const PlayButton = styled.button`
+  box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);
+  font-family: Netflix Sans, Helvetica, Arial, sans-serif;
+  background-color: #e6e6e6;
+  letter-spacing: 3px;
+  color: black;
+  border-width: 0;
+  padding: 10px 20px;
+  border-radius: 5px;
+  max-width: 130px;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+
+  &:hover {
+    background-color: brown;
+    color: white;
+  }
+`;
