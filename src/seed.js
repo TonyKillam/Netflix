@@ -15,7 +15,7 @@ export function seedDatabase(firebase) {
   // Documentaries
   firebase.firestore().collection("series").add({
     id: getUUID(),
-    title: "Tiger King",
+    title: "Ashok King",
     description:
       "An exploration of big cat breeding and its bizarre underworld, populated by eccentric characters.",
     genre: "documentaries",
