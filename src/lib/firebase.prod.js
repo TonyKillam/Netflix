@@ -3,7 +3,7 @@ import "firebase/compat/firestore";
 import "firebase/compat/auth";
 
 // *********** Below line is commented out to prevent re-seeding of database ***********
-import { seedDatabase } from "../seed";
+// import { seedDatabase } from "../seed";
 // *********** Never uncomment the above line unless you want to re-seed the database **
 
 // we need to seed the database here
@@ -22,7 +22,7 @@ const config = {
 const firebase = Firebase.initializeApp(config);
 
 // *********** Below line is commented out to prevent re-seeding of database ***********
-seedDatabase(firebase);
+// seedDatabase(firebase);
 // *********** Above line is commented out to prevent re-seeding of database ***********
 // *********** Never uncomment the above line unless you want to re-seed the database **
 
